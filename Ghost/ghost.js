@@ -1,4 +1,4 @@
-// PART 1: CANVAS
+/*// PART 1: CANVAS
 
 const canvas = document.querySelector('canvas');
       const context = canvas.getContext('2d');
@@ -32,8 +32,24 @@ const canvas = document.querySelector('canvas');
       }
 
       function draw() {
-        context.fillStyle = 'black';
+
+        let opacity = 1;
+
+
+        for (let i = 0; i < 10; i++) {
+          opacity -= 0.1;
+          console.log(opacity);
+
+          if (opacity == 0) {
+            opacity = 1;
+          }
+        }
+
+        context.fillStyle = 'hsla(0%, 0%, 0%,' + opacity + ')';
         context.fillRect(0, 0, width, height);
+
+        requestAnimationFrame(draw);
+
       }
 
       // when the whole page has loaded, including all dependent resources

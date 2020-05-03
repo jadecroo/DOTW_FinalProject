@@ -6,6 +6,22 @@
     <title>Model Loaded into a Scene</title>
     <style>
 
+    @keyframes fade {
+          0% {background-color: black;}
+          100% {background-color: white;}
+        }
+
+    body {
+      background-color: black;
+      animation-name: fade;
+      animation-iteration-count: infinite;
+      animation-duration: 10s;
+      animation-direction: alternate;
+    }
+
+
+
+
     #bg {
       position: absolute;
       top: 0;
@@ -21,16 +37,16 @@
     <div id="controls">
       <p id="colors">PLAY</p>
       <p id="stop">PAUSE</p>
-      <audio id="audio" loop src="media/instrumental.wav"></audio>
+      <!--<audio id="audio" controls loop src="media/instrumental.wav"></audio>-->
     </div>
 
     <canvas id="bg"></canvas>
 
 
-    
+
     <script src="three.min.js"></script>
     <script src="GLTFLoader.js"></script>
     <script src="OrbitControls.js"></script>
-    <script src="model.js"></script>
+    <script src="ghost.js"></script>
   </body>
 </html>
