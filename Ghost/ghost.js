@@ -1,54 +1,46 @@
 // PART 1: CANVAS
 
 const canvas = document.querySelector('canvas');
-const context = canvas.getContext('2d');
+      const context = canvas.getContext('2d');
 
-let width;
-let height;
+      let width;
+      let height;
 
-let pxScale = window.devicePixelRatio;
+      // set the number of canvas pixels, scaled for screen resolution
+      let pxScale = window.devicePixelRatio;
 
-function setup() {
-  // full browser canvas
-  width = window.innerWidth;
-  height = window.innerHeight;
+      function setup() {
+        // full browser canvas
+        width = window.innerWidth;
+        height = window.innerHeight;
 
-  canvas.style.width = width + 'px';
-  canvas.style.height = height + 'px';
+        // fixed canvas size
+        // width = canvas.width;
+        // height = canvas.height;
 
-  canvas.width = width * pxScale;
-  canvas.height = height * pxScale;
+        // set the CSS display size
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
 
-  context.scale(pxScale, pxScale);
-}
+        canvas.width = width * pxScale;
+        canvas.height = height * pxScale;
 
-function draw() {
-  if (width !== window.innerWidth || height !== window.innerHeight) {
-    setup();
-  } else {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-  }
+        // normalize the coordinate system
+        context.scale(pxScale, pxScale);
 
-  let pixels = context.getImageData(0, 0, canvas.width, canvas.height);
-  let pixelData = pixels.data;
+        draw();
+      }
 
-  // animated blue pixel backround
-  for (let i = 0; i < pixelData.length; i += 4) { // cycle through pixels
-    pixelData[i] = 0;
-    pixelData[i + 1] = 0;
-    pixelData[i + 2] = Math.floor(Math.random() * 255);
-    pixelData[i + 3] = 255;
-  }
+      function draw() {
+        context.fillStyle = 'black';
+        context.fillRect(0, 0, width, height);
+      }
 
-  context.putImageData(pixels, 0, 0);
+      // when the whole page has loaded, including all dependent resources
+      window.addEventListener('load', setup);
 
-  requestAnimationFrame(draw);
-}
-
-window.addEventListener('load', () => {
-  setup();
-  draw();
-});
+      // resize canvas when window is resized (for full browser canvas only)
+      window.addEventListener('resize', setup);
 
 // PART 2: WEBGL
 
