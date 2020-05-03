@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Flower</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+
+  <body>
+    <div id="controls">
+      <p id="colors">PLAY</p>
+      <p id="stop">PAUSE</p>
+      <audio id="audio" loop src="media/instrumental.wav"></audio>
+    </div>
+
+    <canvas id="bg"></canvas>
+
+    <div id="scene">
+      <div class="centerflower" id="centerflower">
+        <div class="mcenter" id="flowercenter"></div>
+        <div class="mpetal" id="petal1"></div>
+        <div class="mpetal" id="petal2"></div>
+        <div class="mpetal" id="petal3"></div>
+        <div class="mpetal" id="petal4"></div>
+        <div class="mpetal" id="petal5"></div>
+        <div class="mpetal" id="petal6"></div>
+      </div>
+    </div>
+
+
+    <script src="colors.js"></script>
+    <script src="colorsbg.js"></script>
+  </body>
+</html>
