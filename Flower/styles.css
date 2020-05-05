@@ -6,15 +6,21 @@ body {
   justify-content: center;
 }
 
+h1 {
+color: pink;
+}
+
 p {
   color: pink;
   top: 0;
   left: 0;
   right: 5px;
+  display: inline;
+  margin: 5px;
 }
 
 #bg {
-  position: absolute;
+  position:absolute;
   top: 0;
   left: 0;
   z-index: -1;
@@ -22,8 +28,7 @@ p {
 
 #controls {
   position:absolute;
-  top: 0; /*[wherever you want it]*/
-  left: 0;
+  bottom: 0;
 }
 
 #canvas {

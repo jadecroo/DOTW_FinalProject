@@ -1,13 +1,13 @@
 
 // AUDIO
-const title = document.getElementById("colors");
+const music = document.getElementById("play");
 const stop = document.getElementById("stop");
 const audioElement = document.querySelector('audio');
 
 var threshold = 480 ;  //Point where turn the "flower" pink
 var frequencies = 120 ; //Number of records to count (You want to look for lower frequencies)
 
-title.onclick = function() {
+music.onclick = function() {
 
     audioElement.play();
 
@@ -28,10 +28,6 @@ title.onclick = function() {
 
     src.connect(analyser);
     analyser.connect(context.destination);
-
-
-
-
 
     analyser.fftSize = 1024;
 
