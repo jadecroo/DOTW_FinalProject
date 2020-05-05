@@ -1,0 +1,106 @@
+body {
+	height: 100vh;
+	font-family: 'Slabo 27px', serif;
+	display: flex;
+  background-color: white;
+}
+.fade-in {
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
+  position: absolute;
+  left: 25%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+}
+}
+
+/*text*/
+
+h1 {
+	font-family: Futura-Bold;
+	font-size: 60px;
+	color: pink;
+	text-align: center;
+}
+
+h2 {
+	font-family: Futura-Bold;
+	font-size: 50px;
+	color: pink;
+	text-align: center;
+}
+
+h3 {
+	font-family: Futura;
+	font-size: 50px;
+	color: pink;
+	text-align: center;
+}
+
+h4 {
+	font-family: Futura;
+	font-size: 15px;
+	color: pink;
+	text-align: center;
+}
+
+h5 {
+	font-family: Futura;
+	font-size: 15px;
+	color: pink;
+	text-align: right;
+}
+
+p {
+	font-family: Futura-Bold;
+	font-size: 15px;
+	color: pink;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

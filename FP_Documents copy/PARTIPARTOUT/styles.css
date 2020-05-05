@@ -1,0 +1,47 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: black;
+  font-family: Futura;
+  font-size: 25px;
+  text-align: center;
+  text-shadow: 2px 2px white;
+}
+
+p {
+  color: black;
+    size: 20px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 5px;
+    display: inline;
+    margin: 5px;
+    text-shadow: 2px 2px white;
+}
+
+#song {
+  position: absolute;
+      bottom: 15px;
+      right: 15px;
+}
+
+#controls {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+#bg2 {
+  z-index: -1;
+}
